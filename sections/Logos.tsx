@@ -19,7 +19,7 @@ const IMG_PLACEHODLER = Array(30).fill(0).map(() => ({
 }));
 
 export default function Logos({
-  title = "Edit this heading however you want",
+  title = "Creating Experiences, Crafting Emotions",
   logos = IMG_PLACEHODLER,
 }: Props) {
   const slideContent = (
@@ -37,12 +37,12 @@ export default function Logos({
     </div>
   );
   return (
-    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 py-6 lg:py-14">
+    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 py-6 lg:py-14 mt-[5rem] fadeInUp-animation">
       <div class="flex flex-col gap-12">
-        <p class="text-center text-lg">{title}</p>
-        <div class="relative w-full overflow-hidden h-11">
-          <div class="animate-sliding absolute top-0 left-0 flex flex-nowrap h-11">
-            {slideContent}
+        <p class="text-center text-4xl font-extrabold font-Rosarivo">{title}</p>
+        <div class="relative w-full">
+          <div class="animate-sliding absolute top-0 left-0 flex flex-nowrap text-[4rem] font-extrabold whitespace-nowrap">
+          UI/UX Design     |     Branding | Illustration | Motion Graphics
           </div>
         </div>
       </div>

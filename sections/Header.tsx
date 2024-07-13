@@ -31,10 +31,10 @@ export default function Header({
   },
   navigation = {
     links: [
-      { label: "Home", url: "/" },
-      { label: "About us", url: "/" },
-      { label: "Princing", url: "/" },
-      { label: "Contact", url: "/" },
+      { label: "Home", url: "#hero" },
+      { label: "Projects", url: "#project" },
+      { label: "Blogs", url: "#blogs" },
+      { label: "Contact", url: "#contact" },
     ],
     buttons: [
       { id: "change-me-1", href: "/", text: "Change me", outline: false },
@@ -43,13 +43,14 @@ export default function Header({
   },
 }: Nav) {
   return (
-    <nav class="drawer drawer-end">
+    <nav class="drawer drawer-end z-20 bg-white fadeInUp-animation">
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
       <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
-        <a href="/">
-          <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
+        <a href="/" class="text-6xl font-extrabold font-white mx-auto flex justify-between font-Oswald whitespace-nowrap">
+          {/* <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} /> */}
+          ● SIMAR ●
         </a>
 
         <div class="hidden items-center justify-between lg:flex w-full">
@@ -91,8 +92,8 @@ export default function Header({
         </label>
       </div>
 
-      {/* sidebar */}
-      <aside class="drawer-side z-50">
+      {/*    */}
+      <aside class="drawer-side">
         {/* Close when clicking on overlay */}
         <label
           htmlFor="mobile-drawer-nav"
@@ -102,12 +103,13 @@ export default function Header({
 
         <div class="flex flex-col gap-8 min-h-full w-80 bg-base-100 text-base-content">
           <a class="p-4" href="/">
-            <Image
+            
+            {/* <Image
               src={logo.src || ""}
               width={100}
               height={28}
               alt={logo.alt}
-            />
+            /> */}
           </a>
 
           <ul class="menu">
@@ -131,7 +133,7 @@ export default function Header({
                   item.outline && "btn-outline"
                 }`}
               >
-                {item?.text}
+                {/* {item?.text} */}
               </a>
             ))}
           </ul>

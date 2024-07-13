@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosarivo:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk:MORF,SHLN@27,48.7&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -49,4 +53,34 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  .fadeInUp-animation {
+    animation: 1.5s fadeInUp;
+  }
+  @keyframes fadeInUpblog {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  .fadeInUpBlog-animation {
+    animation: 4s fadeInUpblog;
+  }
 }
+

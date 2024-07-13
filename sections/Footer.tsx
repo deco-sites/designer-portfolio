@@ -50,11 +50,11 @@ export default function Footer({
     {
       title: "Column One",
       items: [
-        { label: "Link One", href: "/" },
-        { label: "Link Two", href: "/" },
-        { label: "Link Three", href: "/" },
-        { label: "Link Four", href: "/" },
-        { label: "Link Five", href: "/" },
+        { label: "Instagram", href: "/" },
+        { label: "Facebook", href: "/" },
+        { label: "Dribble", href: "/" },
+        { label: "Twitter", href: "/" },
+        { label: "Github", href: "/" },
       ],
     },
     {
@@ -106,16 +106,18 @@ export default function Footer({
   ],
 }: Props) {
   return (
-    <div class="lg:container mx-auto md:max-w-6xl px-4 pt-16 text-sm">
+    <div>
+    <div class="lg:container mx-auto md:max-w-6xl px-4 pt-16 text-sm fadeInUpBlog-animation" id="contact">
       <div class="flex flex-col gap-20">
         <div class="flex flex-col gap-6 justify-between lg:flex-row">
-          <div>
-            <Image
+          <div class="text-8xl font-extrabold font-white mx-auto flex justify-start font-Oswald whitespace-nowrap mt-[2rem]"> 
+            {/* <Image
               src={logo.src || ""}
               width={100}
               height={28}
               alt={logo.alt}
-            />
+            /> */}
+            CONTACT
           </div>
           <div class="flex gap-9">
             {links?.map((link) => (
@@ -150,13 +152,41 @@ export default function Footer({
                   Subscribe
                 </button>
               </div>
+              <div class="flex gap-4">
+                <input
+                  type="text"
+                  placeholder="Enter your Message"
+                  class="w-full input input-bordered input-primary"
+                />
+                <button
+                  type="submit"
+                  class="btn btn-outline font-normal"
+                  aria-label="Send"
+                >
+                  Send
+                </button>
+              </div>
               <p
                 class="text-xs"
                 dangerouslySetInnerHTML={{ __html: subscribe.instructions }}
               >
               </p>
+
             </form>
           </div>
+          
+        </div>
+        <div>
+        <div class="flex flex-row gap-2">
+            <a href="instagram.com" class="font-Rosarivo text-2xl hover:text-gray-400">Instagram</a>
+            <p class="text-2xl mb-2"> ● </p>
+            <a href="x.com" class="font-Rosarivo text-2xl hover:text-gray-400">X</a>
+            <p class="text-2xl mb-2"> ● </p>
+            <a href="github.com" class="font-Rosarivo text-2xl hover:text-gray-400">Github</a>
+            <p class="text-2xl mb-2"> ● </p>
+            <a href="dribble.com" class="font-Rosarivo text-2xl hover:text-gray-400">Dribble</a>
+          </div>
+        </div>
         </div>
         <div class="border-primary border-t flex flex-col gap-4 items-center justify-between lg:flex-row lg:items-center py-8">
           <div class="flex flex-col gap-4 items-center lg:flex-row lg:gap-6">

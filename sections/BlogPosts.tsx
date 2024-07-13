@@ -18,55 +18,51 @@ export interface Props {
 }
 
 const DEFAULT_IMAGE =
-  "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/682eb374-def2-4e85-a45d-b3a7ff8a31a9";
+  "https://images.pexels.com/photos/17243420/pexels-photo-17243420/free-photo-of-deco-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
 
 export default function BlogPosts({
-  title = "Here's a component for you to showcase your blogposts",
-  description = "This subheading is fully editable, remember?",
+  title = "Blogs",
   posts = [
     {
-      title: "Title of blogpost #1",
-      author: "Name of the author",
+      title: "Design Trends Shaping the Future",
+      author: "Simar",
       excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        "Explore the latest design trends influencing modern creativity and innovation.",
       image: DEFAULT_IMAGE,
       date: "01 Apr 2024",
       readingTime: "10 min",
-      tags: ["Tag #1", "Tag #2", "Tag #3"],
+      tags: ["design", "trends", "uiux"],
     },
     {
-      title: "Title of blogpost #2",
-      author: "Name of the author",
+      title: "Mastering Typography for Impactful Designs",
+      author: "Simar",
       excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-      image: DEFAULT_IMAGE,
-      date: "01 Apr 2024",
+        "Learn how to use typography effectively to enhance visual communication.",
+      image: "https://images.pexels.com/photos/5220022/pexels-photo-5220022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      date: "22 Apr 2024",
       readingTime: "10 min",
-      tags: ["Tag #1", "Tag #2", "Tag #3"],
+      tags: ["typography", "design", "uiux"],
     },
     {
-      title: "Title of blogpost #3",
-      author: "Name of the author",
+      title: "Creating a Cohesive Brand Identity",
+      author: "Simar",
       excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-      image: DEFAULT_IMAGE,
-      date: "01 Apr 2024",
+        "Discover strategies for designing a strong and consistent brand presence.",
+      image: "https://images.pexels.com/photos/7129086/pexels-photo-7129086.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      date: "24 Apr 2024",
       readingTime: "10 min",
-      tags: ["Tag #1", "Tag #2", "Tag #3"],
+      tags: ["identity", "designer", "brand"],
     },
   ],
 }: Props) {
   return (
-    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-12 lg:py-28">
+    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-12 lg:py-28 fadeInUpBlog-animation" id="blogs">
       <div class="space-y-16">
         <div class="flex flex-col lg:flex-row gap-4 justify-between">
-          <div class="space-y-6 lg:w-1/2">
-            <h2 class="text-4xl leading-snug">
+          <div class="space-y-6 lg:w-1/2 my-[5rem] text-center">
+            <h2 class="font-Oswald text-[8rem] mb-[5rem] text-center">
               {title}
             </h2>
-            <p class="text-lg">
-              {description}
-            </p>
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -74,7 +70,7 @@ export default function BlogPosts({
             <div class="border border-secondary rounded-lg overflow-hidden">
               <Image
                 width={640}
-                class="w-full object-fit z-10"
+                class="w-full object-fit z-10 transition-all ease-in-out delay-300 duration-500	hover:scale-110 cursor-pointer"
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={post.image}
                 alt={post.image}
@@ -84,7 +80,7 @@ export default function BlogPosts({
               <div class="p-6 space-y-4">
                 <div class="font-semibold">{post.readingTime}</div>
                 <div class="space-y-2">
-                  <h3 class="text-2xl">{post.title}</h3>
+                  <h3 class="text-2xl hover:text-gray-400 transition-all ease-in duration-300 cursor-pointer">{post.title}</h3>
                   <p class="text-base">{post.excerpt}</p>
                 </div>
                 <div class="flex flex-wrap gap-2">

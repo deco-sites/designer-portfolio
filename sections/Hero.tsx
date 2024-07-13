@@ -29,9 +29,9 @@ const PLACEMENT = {
 };
 
 export default function HeroFlats({
-  title = "Click here to tweak this text however you want.",
+  title = "CREATIVE",
   description =
-    "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.",
+    "Student & Designer, Based in Vancouver, Canada",
   image,
   placement = "left",
   cta = [
@@ -40,7 +40,7 @@ export default function HeroFlats({
   ],
 }: Props) {
   return (
-    <nav class="lg:container lg:mx-auto mx-4">
+    <nav class="lg:container lg:mx-auto mx-4 scroll-smooth fadeInUp-animation" id="hero">
       <div class="flex flex-col items-center gap-8">
         <div
           class={`flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 ${
@@ -60,23 +60,57 @@ export default function HeroFlats({
               loading="lazy"
             />
           )}
+    <video
+    autoplay
+    loop
+    muted
+    class="absolute z-0 w-auto min-w-full min-h-full h-[50vw] max-w-none bg-opacity-50"
+  >
+    <source
+      src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
           <div
-            class={`mx-6 lg:mx-auto lg:w-full space-y-4 gap-4 ${
+            class={`mx-6 lg:mx-auto lg:w-full space-y-4 gap-4 z-10 ${
               image
                 ? "lg:w-1/2 lg:max-w-xl"
                 : "flex flex-col items-center justify-center lg:max-w-3xl"
             }`}
           >
-            <div
-              class="inline-block lg:text-[80px] text-4xl leading-none font-medium"
-              dangerouslySetInnerHTML={{
-                __html: title,
-              }}
-            >
+            <div class="flex flex-col gap-0 mt-[-2vw]">
+              <div class="flex flex-row">
+                <div
+                  className="text-[12vw] leading-none font-Rosarivo text-white"
+                  dangerouslySetInnerHTML={{
+                    __html: "CREATIVE"
+                  }}
+                >
+                </div>
+                <div class="w-[15vw] h-[10vw] overflow-hidden rounded-xl ">
+                  <img class="w-[15vw] h-[10vw] rounded-xl transition-all ease-in-out delay-300 duration-500	hover:scale-110 cursor-custom" src="https://images.pexels.com/photos/707344/pexels-photo-707344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div class="w-[15vw] h-[10vw] ml-[12vw] overflow-hidden rounded-xl ">
+                  <img class="w-[15vw] h-[10vw] rounded-xl transition-all ease-in-out delay-300 duration-500	hover:scale-110 cursor-custom" src="https://images.pexels.com/photos/9984838/pexels-photo-9984838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+                </div>
+                <div
+                  className="lg:text-[12vw] text-[12vw] leading-none font-Oswald mt-[-1.5rem] text-white"
+                  dangerouslySetInnerHTML={{
+                    __html: "DESIGNER"
+                  }}
+                >
+                </div>
+              </div>
             </div>
-            <p class="text-lg md:text-md leading-[150%]">
+            <p class="text-3xl md:text-md leading-[150%] text-extrabold mt-[1rem] text-white">
               {description}
             </p>
+            <div class="text-9xl font-extrabold text-white">
+              ↓
+            </div>
             <div class="flex items-center gap-3">
               {cta?.map((item) => (
                 <a
