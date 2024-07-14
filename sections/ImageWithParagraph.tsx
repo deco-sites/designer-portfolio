@@ -49,17 +49,17 @@ export default function ImageWithParagraph({
         <h1 class="font-Oswald text-[8rem] my-[10rem] text-center">PROJECTS</h1>
       </div>
       <div
-        class={`flex ${
+        /* class={`flex ${
           PLACEMENT[placement]
         } gap-12 md:gap-20 text-left items-center z-10 ${
           disableSpacing?.top ? "" : "pt-12 lg:pt-28"
-        } ${disableSpacing?.bottom ? "" : "pb-12 lg:pb-28"}`}
+        } $ {disableSpacing?.bottom ? "" : "pb-12 lg:pb-28"}`}*/
       >
-        <div class="w-full md:w-1/2 border border-secondary rounded-lg overflow-hidden">
+        <div class="w-full md:w-1/2 border border-secondary rounded-lg overflow-hidden cursor-custom">
           <Image
             width={1200}
             height={1200}
-            class="object-fit z-10 transition-all ease-in duration-500	hover:scale-110 hover:background-50 sticky cursor-custom"
+            class="object-fit z-10 transition-all ease-in duration-500	hover:scale-110 hover:background-50 sticky cursor-custom hover:animate-[wiggle_1s_ease-in-out_infinite]"
             sizes="(max-width: 640px) 100vw, 30vw"
             src={image}
             alt={image}
@@ -72,7 +72,7 @@ export default function ImageWithParagraph({
           {/* <p class="text-sm font-semibold">
             {tagline}
           </p> */}
-          <a class="text-7xl leading-snug font-Rosarivo transition-all duration-300 cursor-custom">
+          <a class="text-7xl leading-snug font-Oswald transition-all duration-300 cursor-custom">
             <p className="m-16 relative group">
             <span>{title}</span>
             <span className="absolute -bottom-1 left-0 w-0 h-2 bg-gray-900 transition-all group-hover:w-full"></span>
@@ -82,7 +82,7 @@ export default function ImageWithParagraph({
             {description}
           </p>
         </div>
-      </div>
+      {/* </div> */}
       <div
         class={`flex ${
           PLACEMENT[placement]
@@ -94,7 +94,7 @@ export default function ImageWithParagraph({
           <Image
             width={1200}
             height={1200}
-            class="object-fit z-10 transition-all ease-in duration-500	hover:scale-110 hover:background-50 sticky cursor-custom"
+            class="object-fit z-10 transition-all ease-in duration-500	hover:scale-110 hover:background-50 sticky cursor-custom hover:animate-[wiggle_1s_ease-in-out_infinite]"
             sizes="(max-width: 640px) 100vw, 30vw"
             src="https://images.pexels.com/photos/24709245/pexels-photo-24709245/free-photo-of-light-city-people-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt={image}
@@ -107,7 +107,7 @@ export default function ImageWithParagraph({
           {/* <p class="text-sm font-semibold">
             {tagline}
           </p> */}
-          <a class="group text-7xl leading-snug font-Rosarivo transition-all duration-300 cursor-custom">
+          <a class="group text-7xl leading-snug font-Oswald transition-all duration-300 cursor-custom">
             <p className="m-16 relative group">
               <span>Baston Village Co.</span>
               <span className="absolute -bottom-1 left-0 w-0 h-2 bg-gray-900 transition-all group-hover:w-full"></span>

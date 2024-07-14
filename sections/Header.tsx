@@ -43,7 +43,7 @@ export default function Header({
   },
 }: Nav) {
   return (
-    <nav class="drawer drawer-end z-20 bg-white fadeInUp-animation">
+    <nav class="drawer drawer-end z-20 fadeInUp-animation">
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
@@ -94,7 +94,7 @@ export default function Header({
 
       {/*    */}
       <aside class="drawer-side">
-        {/* Close when clicking on overlay */}
+        Close when clicking on overlay
         <label
           htmlFor="mobile-drawer-nav"
           aria-label="close sidebar"
@@ -104,12 +104,12 @@ export default function Header({
         <div class="flex flex-col gap-8 min-h-full w-80 bg-base-100 text-base-content">
           <a class="p-4" href="/">
             
-            {/* <Image
+            <Image
               src={logo.src || ""}
               width={100}
               height={28}
               alt={logo.alt}
-            /> */}
+            />
           </a>
 
           <ul class="menu">
@@ -133,7 +133,7 @@ export default function Header({
                   item.outline && "btn-outline"
                 }`}
               >
-                {/* {item?.text} */}
+                {item?.text}
               </a>
             ))}
           </ul>
