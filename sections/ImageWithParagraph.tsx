@@ -59,7 +59,7 @@ export default function ImageWithParagraph({
           <Image
             width={1200}
             height={1200}
-            class="object-fit z-10 transition-all ease-in-out delay-300 duration-500	hover:scale-110 sticky cursor-custom"
+            class="object-fit z-10 transition-all ease-in duration-500	hover:scale-110 hover:background-50 sticky cursor-custom"
             sizes="(max-width: 640px) 100vw, 30vw"
             src={image}
             alt={image}
@@ -72,8 +72,11 @@ export default function ImageWithParagraph({
           {/* <p class="text-sm font-semibold">
             {tagline}
           </p> */}
-          <a class="text-7xl leading-snug font-Rosarivo underline underline-animation transition-all duration-300 cursor-custom">
-            {title}
+          <a class="text-7xl leading-snug font-Rosarivo transition-all duration-300 cursor-custom">
+            <p className="m-16 relative group">
+            <span>{title}</span>
+            <span className="absolute -bottom-1 left-0 w-0 h-2 bg-gray-900 transition-all group-hover:w-full"></span>
+            </p>
           </a>
           <p class="leading-normal font-Rosarivo font-bold">
             {description}
@@ -91,7 +94,7 @@ export default function ImageWithParagraph({
           <Image
             width={1200}
             height={1200}
-            class="object-fit z-10 transition-all ease-in-out delay-300 duration-500	hover:scale-110 sticky cursor-custom"
+            class="object-fit z-10 transition-all ease-in duration-500	hover:scale-110 hover:background-50 sticky cursor-custom"
             sizes="(max-width: 640px) 100vw, 30vw"
             src="https://images.pexels.com/photos/24709245/pexels-photo-24709245/free-photo-of-light-city-people-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt={image}
@@ -104,9 +107,11 @@ export default function ImageWithParagraph({
           {/* <p class="text-sm font-semibold">
             {tagline}
           </p> */}
-          <a class="group text-7xl leading-snug font-Rosarivo underline underline-animation transition-all duration-300 cursor-custom">
-          
-            Baston Village Co.
+          <a class="group text-7xl leading-snug font-Rosarivo transition-all duration-300 cursor-custom">
+            <p className="m-16 relative group">
+              <span>Baston Village Co.</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-2 bg-gray-900 transition-all group-hover:w-full"></span>
+            </p>
           </a>
           <p class="leading-normal font-Rosarivo font-bold">
           Collaborating with Baston Village was inspiring, as their innovative vision, community spirit, sustainable practices, and dedication to preserving heritage greatly impressed me.
