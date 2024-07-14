@@ -49,11 +49,11 @@ export default function ImageWithParagraph({
         <h1 class="font-Oswald text-[8rem] my-[10rem] text-center">PROJECTS</h1>
       </div>
       <div
-        /* class={`flex ${
+        class={`flex ${
           PLACEMENT[placement]
         } gap-12 md:gap-20 text-left items-center z-10 ${
           disableSpacing?.top ? "" : "pt-12 lg:pt-28"
-        } $ {disableSpacing?.bottom ? "" : "pb-12 lg:pb-28"}`}*/
+        } $ {disableSpacing?.bottom ? "" : "pb-12 lg:pb-28"}`}
       >
         <div class="w-full md:w-1/2 border border-secondary rounded-lg overflow-hidden cursor-custom">
           <Image
@@ -82,6 +82,7 @@ export default function ImageWithParagraph({
             {description}
           </p>
         </div>
+      </div>
       {/* </div> */}
       <div
         class={`flex ${
